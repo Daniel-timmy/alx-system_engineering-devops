@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod 666 find . -type d
+chmod 766 find . -type d
