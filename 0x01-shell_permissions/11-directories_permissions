@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type d | chmod -R o+x g+x u+x
+find . -type d | chmod -R u=rwx,go=rx .
