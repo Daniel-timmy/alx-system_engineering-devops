@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -mindepth 1 -type f -iname \*.js -delete
+find -name "*.js" -type f -delete
