@@ -1,5 +1,5 @@
 # kills a process
-exec { 'killmenow':
+exec { 'kill':
    command => 'pkill -f killmenow',
    path    => ['/usr/bin', '/usr/sbin']
 }
