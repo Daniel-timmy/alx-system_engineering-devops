@@ -11,7 +11,7 @@ frontend  timmy-frontend
 	default_backend timmy-backend
 backend timmy-backend
 	balance roundrobin
-	server 92703-web-01 54.174.109.218:80 check
+	server 92703-web-01 34.234.204.132:80 check
 	server 92703-web-02 34.227.90.53:80 check
 "
 echo "$server_config" | sudo tee -a /etc/haproxy/haproxy.cfg
