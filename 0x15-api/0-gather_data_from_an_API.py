@@ -20,7 +20,8 @@ if __name__ == "__main__":
         if item['completed']:
             list_n.append(item['title'])
 
-    print("Employee {} is done with tasks({}/{}):"
-            .format(b_response['name'], len(list_n), len(t_response)))
+    len_l = len(list_n) 
+    n_l = len(t_response)
+    print("Employee {} is done with tasks({}/{}):".format(b_response['name'], len_l, n_l))
     for l_item in list_n:
         print("\t{}".format(l_item))

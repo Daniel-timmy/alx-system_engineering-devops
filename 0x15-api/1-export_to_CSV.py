@@ -20,5 +20,4 @@ if __name__ == "__main__":
 
     with open('{}.csv'.format(employeeId), 'w') as file:
         for item in t_response:
-            file.write('"{}","{}","{}","{}"\n'
-                    .format(item["userId"], username, item["completed"], item["title"]))
+            file.write('"{}","{}","{}","{}"\n'.format(item["userId"], username, item["completed"], item["title"]))
