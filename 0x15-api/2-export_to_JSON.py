@@ -8,16 +8,19 @@ import sys
 if __name__ == "__main__":
     employeeId = sys.argv[1]
     url = "https://jsonplaceholder.typicode.com/users/" + employeeId
-    url_todo = "https://jsonplaceholder.typicode.com/todos?userId=" + employeeId
+    url_td = "https://jsonplaceholder.typicode.com/todos?userId=" + employeeId
 
     response = requests.get(url=url)
-    response_t = requests.get(url=url_todo)
+    response_t = requests.get(url=url_td)
 
     t_response = response_t.json()
     b_response = response.json()
 
     dictionary = {employeeId: []}
+    usern = b_response["username"]
     for item in t_response:
-        dictionary[employeeId].append({"task": item["title"], "completed": item["completed"], "username": b_response["username"]})
+        comp = item["completed"]
+        t_dict = {"task": item["title"], "completed": comp, "username": usern}
+        dictionary[employeeId].append(t_dict)
     with open('{}.json'.format(employeeId), 'w') as file:
         json.dump(dictionary, file)
